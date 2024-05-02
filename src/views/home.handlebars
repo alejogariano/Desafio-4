@@ -1,0 +1,41 @@
+<div class="container mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <h1 style="color: #008000 ">CAMISETAS FUTBOL ARGENTINO</h1>
+            </div>
+            <div class="col-auto">
+                <a href="/realTimeProducts" target="_blank" class="btn btn-success btn-lg">
+                    Inventario
+                </a>
+            </div>
+        </div>
+    </div>
+    {{#if products}}
+    <table class="table table-success  table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Club</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{title}}</td>
+                <td>{{description}}</td>
+                <td>${{price}}</td>
+                <td><img src="{{thumbnails}}" alt="{{title}}" class="img-fluid" style="width: 150px;"></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <p>Producto no disponible</p>
+    {{/if}}
+</div>

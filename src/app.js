@@ -7,7 +7,7 @@ import { handleSocketConnection } from './controllers/socketController.js';
 
 const app = express()
 const PORT = 8080
-const httpServer = app.listen(PORT, console.log(`Servidor funcionando en ${PORT}`))
+const httpServer = app.listen(PORT, console.log(`Listening on ${PORT}`))
 const socketServer = new Server(httpServer)
 
 app.engine('handlebars', handlebars.engine())
